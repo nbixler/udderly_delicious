@@ -17,7 +17,7 @@ const array = [
 function Chocolovers() {
     const [orientation, setOrientation] = useState(0)
     const chocolateMilkMutation = trpc.useMutation("chocolatemilk.new");
-    const chocolateMilks = trpc.useQuery(["chocolatemilk.getAll", { input: {} }])
+    const chocolateMilks = trpc.useQuery(["chocolatemilk.getAll"])
     console.log(chocolateMilks)
     function handleRoll() {
         setOrientation((oldOrientation) => ((oldOrientation + 45) % 360))
